@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "da542a01-4951-4420-a6bb-c82968ac0b17": {
+      "ProjectGuid": "da542a01-4951-4420-a6bb-c82968ac0b17",
+      "DisplayName": "JSONParser",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
