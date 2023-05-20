@@ -6,5 +6,9 @@
 int main()
 {
 	JSONObject* data = new JSONObject();
+	std::ifstream file;
+	file.open("File.json");
+	data->JSONParse(file);
 	data->GetData();
+	file.close();
 }

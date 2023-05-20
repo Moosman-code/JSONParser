@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="JSONObject.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JSONObject.h" />
+    <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FIle.json" />

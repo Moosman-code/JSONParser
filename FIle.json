@@ -1,7 +1,11 @@
 {
   "name": "John Doe",
   "age": 25,
-  "city": "New York",
-  "isStudent": true,
-  "hobbies": [ "reading", "cooking", "running" ]
+  "city": null,
+  "isStudent": false,
+  "hobbies": [
+      "reading",
+      "cooking",
+      "running" 
+    ]
 }
