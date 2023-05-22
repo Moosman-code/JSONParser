@@ -1,3 +1,3 @@
 ﻿  JSONObject.cpp
-D:\JSONParser\Utilities.h(10,2): warning C4091: 'static ': ignored on left of 'Utilities' when no variable is declared
+D:\JSONParser\Utilities.h(15,2): warning C4091: 'static ': ignored on left of 'Utilities' when no variable is declared
   JSONParser.vcxproj -> D:\JSONParser\x64\Debug\JSONParser.exe

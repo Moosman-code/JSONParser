@@ -5,6 +5,11 @@
       "ProjectGuid": "da542a01-4951-4420-a6bb-c82968ac0b17",
       "DisplayName": "JSONParser",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

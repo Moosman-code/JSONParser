@@ -3,9 +3,14 @@
   "age": 25,
   "city": null,
   "isStudent": false,
-  "hobbies": [
-      "reading",
-      "cooking",
-      "running" 
-    ]
+  "favourites": [
+    {
+      "name": "Benedict Cumberbatch",
+      "movie":  "Sherlock Homes"
+    },
+    {
+      "name": "Vigo Mortensen",
+      "movie": "The Lord of The Rings"
+    }
+  ]
 }
