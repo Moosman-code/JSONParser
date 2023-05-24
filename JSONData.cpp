@@ -11,22 +11,27 @@ public:
 		this->obj = new JSONObject();
 	}
 
-	~JSONData() 
+	~JSONData()
 	{
 		delete this->obj;
 	}
 
-	void AddPair(std::pair<std::string, Data*> pair) 
+	void AddPair(std::pair<std::string, Data*> pair)
 	{
 		this->obj->GetData().insert(pair);
 	}
 
-	void print() override 
+	void print() override
 	{
+		std::cout << "-~| Object |~-" << std::endl;
 		for (const auto& pair : this->obj->GetData())
 		{
-
+			std::cout << "Key: " << pair.first << std::endl;
+			pair.second->print();
+			std::cout << std::endl;
 		}
+
+		std::cout << "-~| |~-" << std::endl;
 	}
 
 };

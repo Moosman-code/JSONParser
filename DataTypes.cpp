@@ -19,7 +19,7 @@ public:
 	}
 	void print() override
 	{
-		std::cout << this->value;
+		std::cout << "Value: " << this->value << std::endl;
 	}
 };
 
@@ -35,7 +35,7 @@ public:
 	}
 	void print() override
 	{
-		std::cout << this->value;
+		std::cout << "Value: " << this->value << std::endl;
 	}
 };
 
@@ -45,7 +45,7 @@ class NullData : public Data
 public:
 	void print() override
 	{
-		std::cout << "Null";
+		std::cout << "Value: " << "Null" << std::endl;
 	}
 };
 
@@ -61,7 +61,7 @@ public:
 	}
 	void print() override
 	{
-		std::cout << this->value;
+		std::cout << "Value: " << ((this->value == 1) ? "true" : "false") << std::endl;
 	}
 };
 
@@ -86,10 +86,16 @@ public:
 
 	void print() override 
 	{
+		std::cout << "--<== Vector ==>--" << std::endl;
+		int index = 1;
 		for (Data* data : this->value)
 		{
+			std::cout << index << ". ";
 			data->print();
+			index++;
 		}
+
+		std::cout << "--<====>--" << std::endl;
 	}
 
 	void Add(Data* _data) 

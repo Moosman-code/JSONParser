@@ -20,6 +20,8 @@ public:
 	Data* CreateVector(std::ifstream& jsonFile);
 	Data* CreateObject(std::ifstream& jsonFile);
 
+	void Print();
+
 	void JSONParse(std::ifstream& jsonFile);
 
 public:

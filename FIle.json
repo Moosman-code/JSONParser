@@ -1,16 +1,57 @@
 {
-  "name": "John Doe",
-  "age": 25,
-  "city": null,
-  "isStudent": false,
-  "favourites": [
+  "university": "ABC University",
+  "students": [
     {
-      "name": "Benedict Cumberbatch",
-      "movie":  "Sherlock Homes"
+      "id": 1,
+      "name": "John Smith",
+      "major": "Computer Science",
+      "courses": [
+        {
+          "code": "CS101",
+          "name": "Introduction to Programming",
+          "credits": 3,
+          "grade": "A"
+        },
+        {
+          "code": "CS202",
+          "name": "Data Structures",
+          "credits": 4,
+          "grade": "B+"
+        }
+      ]
     },
     {
-      "name": "Vigo Mortensen",
-      "movie": "The Lord of The Rings"
+      "id": 2,
+      "name": "Emily Johnson",
+      "major": "Business Administration",
+      "courses": [
+        {
+          "code": "BA101",
+          "name": "Introduction to Business",
+          "credits": 3,
+          "grade": "A-"
+        },
+        {
+          "code": "BA302",
+          "name": "Marketing Strategy",
+          "credits": 4,
+          "grade": "A"
+        }
+      ]
     }
-  ]
+  ],
+  "campus": {
+    "name": "Main Campus",
+    "location": "Cityville",
+    "facilities": [
+      {
+        "name": "Library",
+        "hours": "8:00 AM - 10:00 PM"
+      },
+      {
+        "name": "Gymnasium",
+        "hours": "6:00 AM - 11:00 PM"
+      }
+    ]
+  }
 }

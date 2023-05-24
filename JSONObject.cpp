@@ -18,6 +18,16 @@ void JSONObject::SetData(hash_map& other)
 	this->jsonData = other;
 }
 
+void JSONObject::Print() 
+{
+	for (const auto& pair : this->jsonData) 
+	{
+		std::cout << "Key: " << pair.first << std::endl;
+		pair.second->print();
+		std::cout << std::endl;
+	}
+}
+
 JSONObject::JSONObject()
 {
 	std::unordered_map<std::string, Data*> map;
@@ -185,16 +195,38 @@ void JSONObject::JSONParse(std::ifstream& jsonFile)
 		{
 			continue;
 		}
+		else if (token == "[")
+		{
+			VectorData* vectorData = new VectorData();
+			std::string propName = "Vector";
 
-		// Asign
-		std::vector<std::string> args = utilities->SplitAndPassArguments(token);
+			while (std::getline(jsonFile, token))
+			{
+				if (token == "]") 
+				{
+					continue;
+				}
 
-		std::string firstArg = utilities->TrimWhitespaceAndComma(args[0]);
-		std::string secondArg = utilities->TrimWhitespaceAndComma(args[1]);
+				token = utilities->TrimWhitespaceAndComma(token);
+				Data* propValue = CoverComplicatedCasses(token, jsonFile);
+				vectorData->Add(propValue);
+			}
 
-		std::string propName = AssignPropName(firstArg);
-		Data* propValue = CoverComplicatedCasses(secondArg, jsonFile);
-		
-		this->jsonData.insert(std::make_pair(propName, propValue));
+			this->jsonData.insert(std::make_pair(propName, vectorData));
+			return;
+		}
+		else 
+		{
+			// Asign
+			std::vector<std::string> args = utilities->SplitAndPassArguments(token);
+
+			std::string firstArg = utilities->TrimWhitespaceAndComma(args[0]);
+			std::string secondArg = utilities->TrimWhitespaceAndComma(args[1]);
+
+			std::string propName = AssignPropName(firstArg);
+			Data* propValue = CoverComplicatedCasses(secondArg, jsonFile);
+			this->jsonData.insert(std::make_pair(propName, propValue));
+		}
+
 	}
 }

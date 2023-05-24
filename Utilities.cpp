@@ -31,21 +31,16 @@ std::string Utilities::TrimWhitespaceAndComma(const std::string& str)
 
 std::vector<std::string> Utilities::SplitAndPassArguments(std::string& token) 
 {
-    // Split the line
-    std::stringstream sstream(token);
+    std::string delimiter = ": ";
+    size_t index = token.find(delimiter);
 
-    std::vector<std::string> lineData;
-    std::string data;
+    // Split the line based on the delimiter
+    std::string firstArg = token.substr(0, index);
+    std::string secondArg = token.substr(index + delimiter.length());
 
-    while (std::getline(sstream, data, ':'))
-    {
-        lineData.push_back(data);
-    }
-
-    // Asign
     std::vector<std::string> args;
-    args.push_back(lineData[0]);
-    args.push_back(lineData[1]);
+    args.push_back(firstArg);
+    args.push_back(secondArg);
 
     return args;
 }
