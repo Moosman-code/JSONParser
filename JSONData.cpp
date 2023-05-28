@@ -21,6 +21,16 @@ public:
 		this->obj->GetData().insert(pair);
 	}
 
+	hash_map GetMap() 
+	{
+		return this->obj->GetData();
+	}
+
+	void SetMap(hash_map& newMap) 
+	{
+		this->obj->SetData(newMap);
+	}
+
 	void print() override
 	{
 		std::cout << "-~| Object |~-" << std::endl;

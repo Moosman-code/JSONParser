@@ -17,6 +17,12 @@ public:
 	{
 		this->value = _value;
 	}
+
+	void SetValue(std::string other) 
+	{
+		this->value = other;
+	}
+
 	void print() override
 	{
 		std::cout << "Value: " << this->value << std::endl;
@@ -76,7 +82,7 @@ public:
 		this->value = std::vector<Data*>();
 	}
 	
-	~VectorData() 
+	virtual ~VectorData() 
 	{
 		for (Data* data : this->value) 
 		{
@@ -95,11 +101,16 @@ public:
 			index++;
 		}
 
-		std::cout << "--<====>--" << std::endl;
+		std::cout << "--<= =  = =>--" << std::endl;
 	}
 
 	void Add(Data* _data) 
 	{
 		this->value.push_back(_data);
+	}
+
+	std::vector<Data*> GetVector() 
+	{
+		return this->value;
 	}
 };

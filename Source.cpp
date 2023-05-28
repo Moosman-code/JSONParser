@@ -9,8 +9,4 @@ int main()
 	std::ifstream file;
 	file.open("File.json");
 	data->JSONParse(file);
-	data->Print();
-	
-	std::unordered_map<std::string, Data*> map = data->GetData();
-	file.close();
 }
